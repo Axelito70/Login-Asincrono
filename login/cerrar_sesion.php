@@ -4,5 +4,5 @@ session_unset(); //libera la sesion actual
 session_destroy(); //destruye las varuables sesiones
 
 header("location: /paginaWB/login/login.php"); //una vez que mandamos a traer el archivo destuye y nos redirigue a login
-
+//añadir un crud en listado de productos añadir,eliminar y actualizar en el idex.html
 ?>

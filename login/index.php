@@ -25,7 +25,7 @@ require_once("./app/controller/inicio.php");
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Campo</th>
-                  <th scope="col">información</th>
+                  <th scope="col">Información</th>
                 </tr>
               </thead>
               <tbody>
@@ -47,6 +47,33 @@ require_once("./app/controller/inicio.php");
               </tbody>
             </table>
 
+            <!-- Tabla para mostrar productos -->
+            <table class="table table-striped table-bordered mt-4">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="listado_productos">
+                <!-- Productos se agregarán aquí -->
+              </tbody>
+            </table>
+
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-5">
+                        <label for="producto">Producto</label>
+                        <input id="producto" class="form-control" type="text" placeholder="Nombre del producto">
+                        <label for="precio">Precio</label>
+                        <input id="precio" class="form-control" type="text" placeholder="Precio del producto">
+                        <button id="btn_agregar" class="btn btn-primary w-100 mt-2">Añadir</button>
+                    </div>
+                </div>
+            </div>
+
             <!-- Botón para cerrar sesión -->
             <div class="d-flex justify-content-center mt-3">
                 <a href="cerrar_sesion.php" class="btn btn-danger btn-lg">Cerrar sesión</a>
@@ -54,9 +81,6 @@ require_once("./app/controller/inicio.php");
         </div>
         <div class="col"></div>
     </div>
+    <script src="./public/js/productos.js"></script>
 </body>
 </html>
-
-
-   
-    
