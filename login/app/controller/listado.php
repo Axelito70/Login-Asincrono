@@ -1,7 +1,7 @@
+
 <?php
 session_start();
 
-// Inicializar la sesión de productos si no existe
 if (!isset($_SESSION['productos'])) {
     $_SESSION['productos'] = [];
 }
@@ -23,7 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo json_encode([0, "Error: Producto o precio incompletos."]);
     }
 } else {
-    // Si la solicitud no es POST, devolver la lista de productos en la sesión
     echo json_encode($_SESSION['productos']);
 }
 ?>
